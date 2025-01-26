@@ -1,0 +1,25 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+.container{
+  background-color: aqua;
+  height: 100dvh;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.leftcontainer{
+  background-color: red;
+  display: flex;
+  flex: 1;
+}
+
+
+.rightcontainer{
+  background-color: blue;
+  display: flex;
+  flex: 1;
+}
