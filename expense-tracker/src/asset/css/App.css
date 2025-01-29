@@ -1,48 +1,77 @@
 *{
-margin: 0;
-padding: 0;
-}
+  margin: 0;
+  padding: 0;
+  }
+  
+  .container{
+    background-image: linear-gradient( rgb(182, 181, 181) , white);
+    height: 100dvh;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  
+  .leftcontainer{
+    display: flex;
+    flex: 1;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .leftcontainer img{
+    height:30%;
+    width:30%;
+    border-radius: 12px;
+  
+  }
+  .leftcontainer p{
+    margin-bottom:20px;
+      font-size:24px;
+    font-wieght: bold;
+  }
+  .rightcontainer{
+    display: flex;
+    flex: 1;
+    align-items:center;
+    justify-content: center;
 
-.container{
-  background-image: linear-gradient( rgb(182, 181, 181) , white);
-  height: 100dvh;
-  display: flex;
-  flex-direction: row;
-}
-
-
-.leftcontainer{
-  display: flex;
-  flex: 1;
-  align-items:center;
-  justify-content: center;
-}
-
-.leftcontainer img{
-  height:30%;
-  width:30%;
-  border-radius: 12px;
-
-}
-
-.rightcontainer{
-  display: flex;
-  flex: 1;
-}
-
-.Header{
-  display: flex;
-  flex-direction: row;
-  height: 6%;
-  width: 100%;
-  padding: 6px;
-  align-items: center;
-  top: 0;
-  border-bottom: 1.5px solid gray;
-}
-
-.Header img{
-  height: 3.5%;
-  width: 3.5%;
-  margin-right: 12px;
-}
+  }
+  
+  .Header{
+    display: flex;
+    flex-direction: row;
+    height: 6%;
+    width: 100%;
+    padding: 6px;
+    align-items: center;
+    top: 0;
+    border-bottom: 1.5px solid gray;
+  }
+  
+  .Header img{
+    height: 3.5%;
+    width: 3.5%;
+    margin-right: 12px;
+  }
+  
+  .formcard{
+    background-color: white;
+    width: 60%;
+    height: 40%;
+    border-radius: 12px;
+    box-shadow: 7px 7px 24px 0px black;
+    padding: 8px;
+    
+  }
+  .formcard div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:18px;
+  }
+  .formcard input{
+    margin-top:10px;
+    width:80%;
+    height:24px;
+    padding-left:10px;
+  }
