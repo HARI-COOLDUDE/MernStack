@@ -36,6 +36,7 @@
     align-items:center;
     justify-content: center;
 
+<<<<<<< HEAD
   }
   
   .Header{
@@ -75,3 +76,76 @@
     height:24px;
     padding-left:10px;
   }
+=======
+.container{
+  background-image: linear-gradient( rgb(182, 181, 181) , white);
+  height: 100dvh;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.leftcontainer{
+  display: flex;
+  flex: 1;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.leftcontainer img{
+  height:30%;
+  width:30%;
+  border-radius: 12px;
+
+}
+.leftcontainer p{
+  margin-bottom:20px;
+    font-size:24px;
+  font-wieght: bold;
+}
+.rightcontainer{
+  display: flex;
+  flex: 1;
+  align-items:center;
+  justify-content: center;
+}
+
+.Header{
+  display: flex;
+  flex-direction: row;
+  height: 6%;
+  width: 100%;
+  padding: 6px;
+  align-items: center;
+  top: 0;
+  border-bottom: 1.5px solid gray;
+}
+
+.Header img{
+  height: 3.5%;
+  width: 3.5%;
+  margin-right: 12px;
+}
+
+.formcard{
+  background-colour: white;
+  width: 60%;
+  height: 60%;
+  border-radius: 12px;
+  box-shadow: 7px 7px 24px 0px black;
+  padding: 8px;
+  
+}
+.formcard div{
+  display: flex;
+  flex-direction: column;
+  margin-bottom:18px;
+}
+.formcard input{
+  margin-top:10px;
+  width:80%;
+  height:24px;
+  padding-left:10px;
+}
+>>>>>>> 831fa56838317e99f02f0f9c22d0303bac69ec04
