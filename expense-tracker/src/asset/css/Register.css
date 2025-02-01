@@ -1,0 +1,9 @@
+.maincontainer{
+    background-image: linear-gradient( rgb(182, 181, 181) , white);
+    display: flex;
+    flex: 1;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 13%;
+  }

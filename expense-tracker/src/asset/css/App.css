@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   }
+  html,
+  body{
+    overflow:hidden;
+  }
   
   .container{
     background-image: linear-gradient( rgb(182, 181, 181) , white);
@@ -79,8 +83,6 @@
     border: 1px solid black;
   }
 
-
-
 .formcard label{
   margin-bottom: 4px;
   font-size: 16px;
@@ -93,4 +95,9 @@
   border: none;
   background-color: black;
   color: white;
+}
+
+.formcard button:hover {
+  background-color: rgb(120, 19, 71);
+  font-size: 18px;
 }

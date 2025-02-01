@@ -1,7 +1,8 @@
 import React from 'react'
-
+import '../asset/css/Register.css'
 function Register() {
   return (
+    <div className='maincontainer'>
     <div className='formcard'>
                     <div>
                     <h2 style={{alignSelf:'center'}}>Register</h2>
@@ -55,7 +56,7 @@ function Register() {
                         <button>Submit</button>
                     </div>
                 </div>
-
+                </div>
   )
 }
 

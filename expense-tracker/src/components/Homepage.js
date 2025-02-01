@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { use } from 'react'
 import img1 from '../asset/img/dashboard.jpeg'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router-dom'
 function Homepage() {
+
+    const navigate= useNavigate();
+    const doLogin = ()=>{
+        console.log("Clicked")
+        navigate("/dashboard");
+    }
     return (
         <div className='container'>
             <div className='leftcontainer'>
@@ -39,7 +45,7 @@ function Homepage() {
                         />
                     </div>
                         <div>
-                        <button>Login</button>
+                        <button onClick={doLogin}>Login</button>
                         </div>
                         <div>
                         <span style={{alignSelf:'center'}}>Not a user ? <Link to = "/register">Register</Link></span>
