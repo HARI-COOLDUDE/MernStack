@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
-import Logo from '../asset/img/logo.jpeg'
-import arrow from '../asset/img/downarrow.jfif'
+import Logo from '../asset/img/logo.png'
+import arrow from '../asset/img/dropdown.jfif'
 import { useNavigate, useLocation } from 'react-router-dom'
 
 function Header() {

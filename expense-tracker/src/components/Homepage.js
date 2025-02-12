@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import img1 from '../asset/img/dashboard.jpeg'
+import img1 from '../asset/img/dashboard.png'
 import { Link, useNavigate } from 'react-router-dom'
 function Homepage() {
 
