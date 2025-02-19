@@ -11,7 +11,7 @@ const reset =(req,res)=>{
 const signup =async(req,res)=>{
     
     try{
-        console.log("100",req.body)
+        
         const {name,email,password}= req.body;
         const user =await UserModel.findOne({email});
         
@@ -36,8 +36,41 @@ const signup =async(req,res)=>{
     })
     }
 }
-const login =(req,res)=>{
-    res.send("login")
+const login =async(req,res)=>{
+    try{
+        const {name,email,password}= req.body;
+        const user =await UserModel.findOne({email});
+
+        if (!user){
+            return res.status(404)
+            .json({message: 'User does not exist, Pls signup',success:false});
+        }
+        const userModel = new UserModel({  email , password})
+        const pass = await bcrypt.compare(password,user.password);
+        console.log('psw',pass)
+        if(pass == false)
+            {
+                return res.status(403)
+                .json({message: 'Invalid credantitals',success:false});
+            }
+        const token =jwt.sign({email:email,name:user.name},process.env.JWT_KEY,{expireIn:'24h'})
+        
+        res.status(200)
+        .json({
+            message : "Login Successfully",
+            success : true,
+            name : user.name,
+            email : user.email,
+            token : token
+        })
+    }
+    catch (err) {
+        res.status(500)
+        .json({
+            message:"Login unsuccesfully",
+            success : false
+    })
+    }
 }
 
 module.exports={
