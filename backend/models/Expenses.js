@@ -17,8 +17,12 @@ const ExpenseSchema = new Schema({
     date: {
         type: Date,
         required: true,
+    },
+    email: {
+        type: String,
+        required: true,
     }
 });
 
-const ExpenseModel = mongoose.model('Expenses', ExpenseSchema);
+const ExpenseModel = mongoose.model('expenses', ExpenseSchema);
 module.exports = ExpenseModel;
