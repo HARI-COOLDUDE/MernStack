@@ -25,13 +25,15 @@ const find = async(req, res) => {
             })
 
     }
+   
 }
 
 const insert = async(req, res) => {
     try {
         const { title,amount,type,date,email } = req.body;
-        console.log("Add ",title,amount,type,date,email);
+       console.log("Add ",title,amount,type,date,email);
         const expenseModel = new ExpenseModel({ title,amount,type,date,email });
+       
 
         await expenseModel.save();
         res.status(201)
@@ -109,6 +111,7 @@ const modify = async(req, res) => {
             })
 
     }
+   
 }
 
 const reset = async(req, res) => {
@@ -157,6 +160,7 @@ const reset = async(req, res) => {
             })
 
     }
+  
 }
 
 module.exports = {

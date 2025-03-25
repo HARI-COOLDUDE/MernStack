@@ -53,16 +53,16 @@ const sendEmail = async (req, res) => {
         var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'harimilan1203@gmail.com',
+                user: 'mittalabhyudaya2209@gmail.com',
                 pass: process.env.Pass
             }
         });
         var otp = Math.floor(100000 + Math.random() * 900000);
         var msg = "OTP to reset your password is " + otp.toString();
-        console.log("Email of the ", msg, email);
+        console.log("Email ", msg, email);
 
         var mailOptions = {
-            from: 'harimilan1203@gmail.com',
+            from: 'mittalabhyudaya2209@gmail.com',
             to: email,
             subject: 'Password Reset Code',
             text: msg
@@ -128,6 +128,7 @@ const signup = async (req, res) => {
 const login = async (req, res) => {
     try {
         const { email, password } = req.body;
+        console.log("Check ",email,password);
         const user = await UserModel.findOne({ email });
         console.log("User ", user);
         if (!user) {
